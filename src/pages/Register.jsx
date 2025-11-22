@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 
-export function Register() {
+export default  function Register() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    
-    
+
+
     const handleSubmit = (e) => {
     e.preventDefault();
     };
-    
-    
+
+
     return (
     <motion.div
     initial={{ opacity: 0 }}
@@ -30,8 +30,8 @@ export function Register() {
     >
     <h2 className="text-4xl font-bold text-center mb-6 text-gray-900">ثبت‌نام</h2>
     <p className="text-center text-gray-600 mb-6">لطفا اطلاعات خود را وارد کنید.</p>
-    
-    
+
+
     <form onSubmit={handleSubmit} className="space-y-6">
     <motion.div initial={{ x: -20, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.1 }}>
     <label className="block mb-2 font-medium">نام و نام خانوادگی</label>
@@ -44,8 +44,8 @@ export function Register() {
     required
     />
     </motion.div>
-    
-    
+
+
     <motion.div initial={{ x: -20, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.2 }}>
     <label className="block mb-2 font-medium">ایمیل</label>
     <input
@@ -57,8 +57,8 @@ export function Register() {
     required
     />
     </motion.div>
-    
-    
+
+
     <motion.div initial={{ x: -20, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.3 }}>
     <label className="block mb-2 font-medium">رمز عبور</label>
     <input
@@ -70,8 +70,8 @@ export function Register() {
     required
     />
     </motion.div>
-    
-    
+
+
     <motion.button
     whileHover={{ scale: 1.03 }}
     whileTap={{ scale: 0.97 }}
@@ -81,8 +81,8 @@ export function Register() {
     ثبت‌نام
     </motion.button>
     </form>
-    
-    
+
+
     <p className="text-center mt-6 text-gray-700">
     قبلا حساب ساختی؟
     <Link to="/login" className="text-pink-600 font-bold mr-1 hover:underline">ورود</Link>
