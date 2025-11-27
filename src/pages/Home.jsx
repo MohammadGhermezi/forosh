@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import ProductCard from './Cart'
+import ProductCard from '../components/ProductCard'
 
 const products = [
   {
@@ -40,18 +40,18 @@ const Home = () => {
 
       {/* ------------------ HERO SECTION ------------------ */}
       <div className="bg-gray-900 text-white rounded-2xl p-8 md:p-16 flex flex-col md:flex-row items-center justify-between mt-6">
-        <div>
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+        <div className="flex flex-col items-center justify-baseline">
+          <h1 className="text-4xl text-center md:text-6xl font-bold leading-tight">
             خرید بهترین لباس‌ها  
-            <span className="text-pink-400"> با بهترین قیمت</span>
+            <span className="text-pink-400 text-center"> با بهترین قیمت</span>
           </h1>
-          <p className="mt-4 text-gray-300 text-lg max-w-md">
+          <p className="mt-4 text-gray-300 text-center text-lg max-w-md">
             جدیدترین مدل‌های پوشاک زنانه و مردانه را با بهترین کیفیت از فروشگاه ما خریداری کنید.
           </p>
 
           <Link
             to="/collection"
-            className="inline-block mt-6 px-6 py-3 bg-pink-500 text-white rounded-full text-lg hover:bg-pink-600 transition"
+            className="inline-block mt-6 px-6 py-3  bg-pink-500 text-white rounded-full text-lg hover:bg-pink-600 transition"
           >
             مشاهده محصولات
           </Link>
@@ -78,7 +78,7 @@ const Home = () => {
         ].map((cat, i) => (
           <Link
             key={i}
-            to="/collection"
+            to={`/collection?category=${cat.title}`}
             className="relative group rounded-xl overflow-hidden shadow-lg cursor-pointer"
           >
             <img

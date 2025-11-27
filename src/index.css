@@ -3,3 +3,50 @@
 a.active hr{
     display: block;
 }
+
+/* ارتفاع اسلایدر */
+.noUi-target {
+  height: 8px;
+  border-radius: 100px;
+  background: #e5e7eb; /* gray-200 */
+}
+
+/* رنگ بخش انتخاب‌شده */
+.noUi-connect {
+  background: #ec4899 !important; /* pink-500 */
+  border-radius: 100px;
+}
+
+/* هندل (دو دایره اسلایدر) */
+.noUi-handle {
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 9999px !important; 
+  background: white !important;
+  border: 3px solid #ec4899 !important; 
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  cursor: grab !important;
+}
+
+.noUi-handle:active {
+  cursor: grabbing !important;
+}
+
+/* حذف شاخک‌های پیش‌فرض */
+.noUi-handle:before,
+.noUi-handle:after {
+  display: none;
+}
+
+
+/* نوار اسلایدر */
+.noUi-target {
+  position: relative !important; /* اطمینان از موقعیت صحیح */
+  height: 10px !important;
+  border-radius: 100px;
+  background: #e5e7eb;
+  width: 100% !important;
+}
+
+
+
