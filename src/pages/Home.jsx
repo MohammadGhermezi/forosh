@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import ProductCard from '../components/ProductCard'
+import Sitefooter from '../components/footer'
 
 const products = [
   {
@@ -123,7 +124,7 @@ const Home = () => {
         مشاهده تخفیف‌ها
       </Link>
       </div>
-
+        <Sitefooter></Sitefooter>
     </div>
   )
 }
